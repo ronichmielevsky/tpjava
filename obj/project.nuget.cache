@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "X8zeNFKAp2SjLygrr4MyxaE1EFXKVCPZgym8kEG1wwWpdCm2zy3AR2sVngx8xdIuWmqKL3lnAfL/Jz1PN1exLQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\47867214\\Downloads\\Nueva carpeta\\tpjava\\tpjava.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\47867214\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512"
+  ],
+  "logs": []
+}
