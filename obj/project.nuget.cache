@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fuRfGGtZEqKs/9/VcdUNpjsk6T5Ody0I71Nx/lSbH5hJMkwQvVcANW4vZ2qGXMgH8MvcoR5orGBqiZRaiVVukQ==",
+  "dgSpecHash": "icq1r04IrumnncGOQW7Ifnl4cbdfeOOKpugRmojBn4XK6lFfr88WB99N3DhqbBzYknuSvZeJ1xuuLlNT71tEog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\47867214\\Downloads\\Nueva carpeta\\tpjava\\tpjava.csproj",
+  "projectFilePath": "C:\\Users\\47867214\\tpjava\\tpjava.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\47867214\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\47867214\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

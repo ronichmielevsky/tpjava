@@ -9,53 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = tpjava
 build_property.RootNamespace = tpjava
-build_property.ProjectDir = C:\Users\47867214\Downloads\Nueva carpeta\tpjava\
+build_property.ProjectDir = C:\Users\47867214\tpjava\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\47867214\Downloads\Nueva carpeta\tpjava
+build_property.MSBuildProjectDirectory = C:\Users\47867214\tpjava
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Acount/Acount.cshtml]
+[C:/Users/47867214/tpjava/Views/Acount/Acount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XEFjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Acount/IniciarSes.cshtml]
+[C:/Users/47867214/tpjava/Views/Acount/IniciarSes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XEluaWNpYXJTZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Acount/MostrarDatos.cshtml]
+[C:/Users/47867214/tpjava/Views/Acount/MostrarContraseña.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XE1vc3RyYXJDb250cmFzZcOxYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/47867214/tpjava/Views/Acount/MostrarDatos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XE1vc3RyYXJEYXRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Acount/ss.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XHNzLmNzaHRtbA==
+[C:/Users/47867214/tpjava/Views/Acount/OlvideContraseña.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XE9sdmlkZUNvbnRyYXNlw7FhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Home/Index.cshtml]
+[C:/Users/47867214/tpjava/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Home/Privacy.cshtml]
+[C:/Users/47867214/tpjava/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Shared/Error.cshtml]
+[C:/Users/47867214/tpjava/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/47867214/tpjava/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/_ViewImports.cshtml]
+[C:/Users/47867214/tpjava/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/_ViewStart.cshtml]
+[C:/Users/47867214/tpjava/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/Downloads/Nueva carpeta/tpjava/Views/Shared/_Layout.cshtml]
+[C:/Users/47867214/tpjava/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2mxhvlrmxl

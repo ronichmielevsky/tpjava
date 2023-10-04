@@ -13,13 +13,33 @@ public static void AgregarCuenta(Usuario user){
         }
 }
 
-public static Usuario VerificarCuenta(string username, string contraseña){
-    Usuario roni = null;
+public static List<Usuario> ListarUsuarios(){
+    List<Usuario> _usuarios=null;
      using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            string SQL = "SELECT * FROM Usuario WHERE UserName=@pusername AND Contraseña=@pcontraseña";
-            roni = db.QueryFirstOrDefault<Usuario>(SQL, new { pusername = username, pcontraseña = contraseña});
+            string SQL = "SELECT * FROM Usuario";
+            _usuarios = db.Query<Usuario>(SQL).ToList();;
+        }
+        return _usuarios;
+}
+public static Usuario VerificarCuenta(string username, string contraseña){
+    Usuario roni = new Usuario();
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string SQL = "SELECT * FROM Usuario WHERE UserName = @pUserName AND Contraseña = @pContraseña";
+            roni = db.QueryFirstOrDefault<Usuario>(SQL, new {pUserName = username, pContraseña = contraseña });
         }
         return roni;
 }
+public static Usuario OlvideCont(string username){
+    Usuario roni = null;
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string SQL = "SELECT Contraseña FROM Usuario WHERE UserName = @pUserName";
+            roni = db.QueryFirstOrDefault<Usuario>(SQL, new {pUserName = username});
+        }
+        return roni;
+}
+
+
 }
