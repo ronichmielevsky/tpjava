@@ -22,16 +22,22 @@
 
      [HttpPost]
      public IActionResult AgregarAcount(string nombre, string username, string contraseña, string email, int telefono){
+        int cont=0;
         Usuario user = new Usuario( nombre, username, contraseña, email, telefono);
         BD.AgregarCuenta(user);
         ViewBag.roni = user;
-        List<Usuario> _usuarios=BD.ListarUsuarios();
-        foreach (Usuario usuas in _usuarios){
-            foreach(Usuario roni in _usuarios){
-                if(_usuarios.UserName)
+        List<string> _usuarios=BD.ListarUsuarios();
+        foreach (string usuas in _usuarios){
+            if(usuas==username){
+                cont++;
+                Console.WriteLine(cont);
             }
-        }
-        return View("MostrarDatos");
+         }
+         if(cont >=2){
+            ViewBag.Error = "El nombre de usuario ya existe";
+            return View("Acount");
+         }
+         else{ return View("MostrarDatos");}
     }
 
     public IActionResult Olvide()

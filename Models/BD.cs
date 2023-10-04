@@ -13,12 +13,12 @@ public static void AgregarCuenta(Usuario user){
         }
 }
 
-public static List<Usuario> ListarUsuarios(){
-    List<Usuario> _usuarios=null;
+public static List<string> ListarUsuarios(){
+    List<string> _usuarios=null;
      using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            string SQL = "SELECT * FROM Usuario";
-            _usuarios = db.Query<Usuario>(SQL).ToList();;
+            string SQL = "SELECT UserName FROM Usuario";
+            _usuarios = db.Query<string>(SQL).ToList();;
         }
         return _usuarios;
 }
