@@ -15,11 +15,11 @@ public propiedades(int idpropiedad,string descripcion,string tipopropiedad, int 
 
     IdPropiedad=idpropiedad;
     Descripcion=descripcion;
-    TipoPropiedad=tipodepropiedad;
+    TipoPropiedad=tipopropiedad;
     Precio=precio;
     Ambiente=ambiente;
     ImagenPropiedad=ImagenPropiedad;
     IdDireccion=iddireccion;
-    IdInmobiliaria=idonmobiliaria;
+    IdInmobiliaria=idinmobiliaria;
 }
 }

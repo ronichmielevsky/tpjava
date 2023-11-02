@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+.Inicio{
+margin-top: 100px;
+}
+.titulo{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.IMGinicio img{
+  max-height: 600px;
+}
+.Navbar{
+  float: inline-end;
+}

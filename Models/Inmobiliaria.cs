@@ -6,19 +6,19 @@ public class inmobiliaria{
     public string Direccion{get;set;}
     public string ImagenInmobiliaria{get;set;}
     public int Comision{get;set;}
-    public string IdUsuario{get;set;}
+    public int IdUsuario{get;set;}
 public inmobiliaria(){}
 
 
-public inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string ImagenInmobiliaria, int comision, int idusuario ){
+public inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imagenInmobiliaria, int comision, int idusuario ){
 
 
-    IdInmobiliaria=idonmobiliaria;
+    IdInmobiliaria=idinmobiliaria;
     Nombre=nombre;
     Email=email;
-    Telefono=telefono
+    Telefono=telefono;
     Direccion=direccion;
-    ImagenInmobiliaria=imageninmobiliaria;
+    ImagenInmobiliaria=imagenInmobiliaria;
     Comision=comision;
     IdUsuario=idusuario;
    
