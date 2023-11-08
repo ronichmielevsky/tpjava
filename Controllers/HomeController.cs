@@ -25,11 +25,9 @@ public class HomeController : Controller
     {
         return View("Vender");
     }
-
-
-    public IActionResult Privacy()
+    public IActionResult Contacto()
     {
-        return View();
+        return View("Contacto");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
