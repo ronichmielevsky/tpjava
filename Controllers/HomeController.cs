@@ -21,6 +21,10 @@ public class HomeController : Controller
     {
         return View("Inicio");
     }
+    public IActionResult Vender()
+    {
+        return View("Vender");
+    }
 
 
     public IActionResult Privacy()

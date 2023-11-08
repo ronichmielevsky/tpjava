@@ -33,3 +33,19 @@ margin-top: 100px;
 .Navbar{
   float: inline-end;
 }
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 500px;
+    cursor: pointer;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #050505; 
+}
