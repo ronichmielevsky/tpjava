@@ -9,69 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = tpjava
 build_property.RootNamespace = tpjava
-build_property.ProjectDir = C:\Users\48038607\tpjava\
+build_property.ProjectDir = c:\Users\47572192\Downloads\asdasd\tpjava\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\48038607\tpjava
+build_property.MSBuildProjectDirectory = c:\Users\47572192\Downloads\asdasd\tpjava
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/48038607/tpjava/Views/Acount/Acount.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Acount/Acount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XEFjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Acount/IniciarSes.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Acount/IniciarSes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XEluaWNpYXJTZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Acount/MostrarContraseña.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Acount/MostrarContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XE1vc3RyYXJDb250cmFzZcOxYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Acount/MostrarDatos.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Acount/MostrarDatos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XE1vc3RyYXJEYXRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Acount/OlvideContraseña.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Acount/OlvideContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNvdW50XE9sdmlkZUNvbnRyYXNlw7FhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Home/Index.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Home/Inicio.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Home/Inicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Home/Privacy.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
-[C:/Users/48038607/tpjava/Views/Shared/Error.cshtml]
-=======
-[C:/Users/47867214/tpjava/Views/Home/Vender.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Home/Vender.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZW5kZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47867214/tpjava/Views/Shared/Error.cshtml]
->>>>>>> 1fcfdfe8f92c111b4d2d4599c27fa1ee2dee3aac
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/_ViewImports.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/_ViewStart.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48038607/tpjava/Views/Shared/_Layout.cshtml]
+[c:/Users/47572192/Downloads/asdasd/tpjava/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2mxhvlrmxl

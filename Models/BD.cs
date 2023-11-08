@@ -6,7 +6,7 @@ static class BD{
     private static string _connectionString = @"server=localhost;DataBase=login;Trusted_connection=True;";
     
 public static void AgregarCuenta(Usuario user){
-    string SQL = "INSERT INTO Usuario(Nombre,UserName,Contraseña,Email,Telefono) VALUES (@nombre, @username, @contraseña, @email, @telefono)";
+    string SQL = "INSERT INTO Usuario(Username,Contraseña,Nombre,Email,Telefono) VALUES (@username, @contraseña, @nombre, @email, @telefono)";
      using (SqlConnection db = new SqlConnection(_connectionString))
         {
             db.Execute(SQL, new { nombre = user.Nombre, username = user.UserName, contraseña = user.Contraseña, email = user.Email, telefono = user.Telefono});

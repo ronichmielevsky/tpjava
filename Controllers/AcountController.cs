@@ -21,9 +21,9 @@
     }
 
      [HttpPost]
-     public IActionResult AgregarAcount(string nombre, string username, string contraseña, string email, int telefono){
+     public IActionResult AgregarAcount(string username, string contraseña, string nombre, string email, int telefono){
         int cont=0;
-        Usuario user = new Usuario( nombre, username, contraseña, email, telefono);
+        Usuario user = new Usuario(username, contraseña, nombre, email, telefono);
         BD.AgregarCuenta(user);
         ViewBag.roni = user;
         List<string> _usuarios=BD.ListarUsuarios();
@@ -58,19 +58,19 @@
         return View("OlvideContraseña");
     }
 
-//  [HttpPost]
-//      public IActionResult Login(string username, string contraseña){
-//         ViewBag.roni =BD.VerificarCuenta(username, contraseña);
-//         if (ViewBag.roni!=null)        
-//         {
-//                   return View("MostrarDatos");
-//         }
-//         else
-//         {
-//             ViewBag.Error = "Usuario o Contraseña invalidos";
-//             return View("IniciarSes");
-//         }
-//      }
+ [HttpPost]
+     public IActionResult Login(string username, string contraseña){
+        ViewBag.roni =BD.VerificarCuenta(username, contraseña);
+        if (ViewBag.roni!=null)        
+        {
+                  return View("MostrarDatos");
+        }
+        else
+        {
+            ViewBag.Error = "Usuario o Contraseña invalidos";
+            return View("IniciarSes");
+        }
+     }
    
      
 }
