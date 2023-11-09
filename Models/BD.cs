@@ -41,5 +41,25 @@ public static Usuario OlvideCont(string username){
         return roni;
 }
 
+public static Inmobiliaria TraerInmobiliaria(string idusuario)
+        {
+         Usuario inmo = null;
+          using (SqlConnection db = new SqlConnection(_connectionString)){
+            string SQL = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
+            inmo = db.QueryFirstOrDefault<Usuario>(SQL, new {pIdUsuario = idusuario});
+        }
+            return inmo;        
+    }
+    
+
+public static Propiedades TraerCas(string idpropiedad){
+         Usuario casa = null;
+          using (SqlConnection db = new SqlConnection(_connectionString))
+          {
+            string SQL = "SELECT * FROM Usuario WHERE IdPropiedad = @pIdpropiedad";
+            casa = db.QueryFirstOrDefault<Usuario>(SQL, new {pIdPropiedad = idpropiedad});
+          }
+            return casa;
+        }   
 
 }
