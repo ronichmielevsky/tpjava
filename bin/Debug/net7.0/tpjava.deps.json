@@ -8,18 +8,18 @@
     ".NETCoreApp,Version=v7.0": {
       "tpjava/1.0.0": {
         "dependencies": {
-          "Dapper": "2.0.151",
+          "Dapper": "2.1.15",
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
           "tpjava.dll": {}
         }
       },
-      "Dapper/2.0.151": {
+      "Dapper/2.1.15": {
         "runtime": {
           "lib/net5.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.151.35995"
+            "fileVersion": "2.1.15.52653"
           }
         }
       },
@@ -106,12 +106,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Dapper/2.0.151": {
+    "Dapper/2.1.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mMcZgx1lim0/i1Ozu+lgnBM4GwNIHpCuxV6BV2ovsEfZAXRAq4jb6RIhxGDcVjtmXMLPpdp85jHPdDjBMMwejw==",
-      "path": "dapper/2.0.151",
-      "hashPath": "dapper.2.0.151.nupkg.sha512"
+      "sha512": "sha512-1aWSAosZymEM+mRwfrXteRIN74/JTUjqj9B/KqEbanH6vfUKy9D9cemRN0q1ZOEfSB7d1PpFTpVOCbf2Uv70Og==",
+      "path": "dapper/2.1.15",
+      "hashPath": "dapper.2.1.15.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",

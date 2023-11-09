@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Dapper/2.0.151": {
+      "Dapper/2.1.15": {
         "type": "package",
         "compile": {
           "lib/net5.0/Dapper.dll": {
@@ -163,22 +163,23 @@
     }
   },
   "libraries": {
-    "Dapper/2.0.151": {
-      "sha512": "mMcZgx1lim0/i1Ozu+lgnBM4GwNIHpCuxV6BV2ovsEfZAXRAq4jb6RIhxGDcVjtmXMLPpdp85jHPdDjBMMwejw==",
+    "Dapper/2.1.15": {
+      "sha512": "1aWSAosZymEM+mRwfrXteRIN74/JTUjqj9B/KqEbanH6vfUKy9D9cemRN0q1ZOEfSB7d1PpFTpVOCbf2Uv70Og==",
       "type": "package",
-      "path": "dapper/2.0.151",
+      "path": "dapper/2.1.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Dapper.png",
-        "dapper.2.0.151.nupkg.sha512",
+        "dapper.2.1.15.nupkg.sha512",
         "dapper.nuspec",
         "lib/net461/Dapper.dll",
         "lib/net461/Dapper.xml",
         "lib/net5.0/Dapper.dll",
         "lib/net5.0/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
-        "lib/netstandard2.0/Dapper.xml"
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -497,44 +498,28 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Dapper >= 2.0.151",
+      "Dapper >= 2.1.15",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\47572192\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\47867214\\.nuget\\packages\\": {},
->>>>>>> 328c983003d9617dd6f8e91fb574a8da307497f8
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\47572192\\Downloads\\asdasd\\tpjava\\tpjava.csproj",
+      "projectUniqueName": "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\tpjava.csproj",
       "projectName": "tpjava",
-      "projectPath": "C:\\Users\\47572192\\Downloads\\asdasd\\tpjava\\tpjava.csproj",
+      "projectPath": "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\tpjava.csproj",
       "packagesPath": "C:\\Users\\47572192\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47572192\\Downloads\\asdasd\\tpjava\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\47867214\\tpjava\\tpjava.csproj",
-      "projectName": "tpjava",
-      "projectPath": "C:\\Users\\47867214\\tpjava\\tpjava.csproj",
-      "packagesPath": "C:\\Users\\47867214\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47867214\\tpjava\\obj\\",
->>>>>>> 328c983003d9617dd6f8e91fb574a8da307497f8
+      "outputPath": "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\47572192\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\47867214\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 328c983003d9617dd6f8e91fb574a8da307497f8
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -563,7 +548,7 @@
         "dependencies": {
           "Dapper": {
             "target": "Package",
-            "version": "[2.0.151, )"
+            "version": "[2.1.15, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
