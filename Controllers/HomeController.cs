@@ -29,6 +29,14 @@ public class HomeController : Controller
     {
         return View("Contacto");
     }
+     public IActionResult Buscador()
+    {
+        return View("Buscador");
+    }
+      public IActionResult VerCasas()
+    {
+        return View("VerCasas");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

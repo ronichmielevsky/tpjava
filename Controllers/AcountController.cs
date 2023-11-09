@@ -63,7 +63,7 @@
         ViewBag.roni =BD.VerificarCuenta(username, contraseña);
         if (ViewBag.roni!=null)        
         {
-                  return View("MostrarDatos");
+                  return View("Inicio","Home");
         }
         else
         {

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\tpjava.csproj": {}
+    "C:\\Users\\47699175\\tpjava\\tpjava.csproj": {}
   },
   "projects": {
-    "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\tpjava.csproj": {
+    "C:\\Users\\47699175\\tpjava\\tpjava.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\tpjava.csproj",
+        "projectUniqueName": "C:\\Users\\47699175\\tpjava\\tpjava.csproj",
         "projectName": "tpjava",
-        "projectPath": "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\tpjava.csproj",
-        "packagesPath": "C:\\Users\\47572192\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\47572192\\Downloads\\Nueva carpeta (3)\\tpjava\\obj\\",
+        "projectPath": "C:\\Users\\47699175\\tpjava\\tpjava.csproj",
+        "packagesPath": "C:\\Users\\47699175\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47699175\\tpjava\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\47572192\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47699175\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
