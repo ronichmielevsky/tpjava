@@ -1,22 +1,80 @@
-<div class="card">
- <div class="image"></div>
-  <div class="content">
-    <a href="#">
-      <span class="title">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </span>
-    </a>
+@{
+    ViewData["Title"] = "VerCasas";
+}
 
-    <p class="desc">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-      dolores, possimus pariatur animi temporibus nesciunt praesentium 
-    </p>
+<div class="text-center">
+      <h1>Selecciona tu propiedad favorita</h1>
+      @foreach (Propiedades item in ViewBag.listaPropiedades)
+      {
+          <div class="card" style="width: 18rem;">
+            <img src="@item.ImagenPropiedad" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"><h2>@item.TipoPropiedad</h2> </h5>
+                <h5 class="card-title"><h4>@item.Descripcion</h4> </h5>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInmo" onclick="MostrarInmo(@item.IdInmobiliaria)">Ver info Inmobiliaria</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalProp"onclick="MostrarProp(@item.IdPropiedad)" >Ver info Propiedad</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalUbi"onclick="MostrarUbi(@item.IdDireccion)" >Ver info Ubicacion</button>
+            </div>
+          </div>
 
-    <a class="action" href="#">
-      Find out more
-      <span aria-hidden="true">
-        →
-      </span>
-    </a>
+    }
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalInmo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">INMOBILIARIA</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="TextoModalInmobiliaria" class="modal-body">
+        aaaaaa
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalProp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">PROPIEDAD</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="TextoModalPropiedad" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalUbi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">UBICACION</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="TextoModalUbicacion" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>

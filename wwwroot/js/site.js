@@ -20,3 +20,74 @@
 
     })
 });
+
+
+function MostrarInmo(id) {        
+    $.ajax(
+        {
+            url:'/Home/VerInfoInmobiliariaAjax',
+            type:'GET',
+            dataType:'JSON',                
+            data:{IdInmobiliaria: id},
+            success:
+                function(response) //en este caso response es un objeto INMOBILIARIA
+                {                        
+                     texto = ""
+                    
+                    response.forEach(element => {                        
+                        texto += "<b>" + element.nombre + "</b><br>Mail: " +  element.email + "<br>Telefono: " + element.telefono + "<br>Dirección: " + element.direccion + "<br> Comision: " + element.comision
+                    });
+                    console.log(texto)
+                    $("#TextoModalInmobiliaria").html(texto);
+                    
+                }
+        });
+}
+
+
+
+function MostrarProp(id) {        
+     $.ajax(
+       {
+             url:'/Home/VerInfoPropiedadesAjax',
+             type:'GET',
+           dataType:'JSON',                
+             data:{IdPropiedad: id},
+             success:
+                 function(response)  //en este caso response es una lista de PROPIEDADES
+                 {   
+                    texto = ""
+                    
+                    response.forEach(element => {                        
+                        texto += "<b>" + element.Descripcion + "</b><br>Propiedad: " +  element.TipoPropiedad + "<br>Precio: " + element.Precio + "<br>Ambiente: " + element.Ambiente 
+                    });
+                    console.log(texto)
+                    $("#TextoModalPropiedad").html(texto);
+                    
+                }
+        });
+ }
+
+
+ function MostrarUbi(id) {        
+    $.ajax(
+      {
+            url:'/Home/VerInfoUbicacionAjax',
+            type:'GET',
+          dataType:'JSON',                
+            data:{IdDireccion: id},
+            success:
+                function(response)  //en este caso response es una lista de UBICACIONES
+                {   
+                    texto = ""
+                    
+                    response.forEach(element => {                        
+                        texto += "<b>" + element.Calle + "</b><br>Altura: " +  element.Altura + "<br>Barrio: " + element.Barrio + "<br>Descripcion: " + element.Descripcion 
+                    });
+                    console.log(texto)
+                    $("#TextoModalUbicacion").html(texto);
+                    
+                }
+        });
+}
+

@@ -41,25 +41,47 @@ public static Usuario OlvideCont(string username){
         return roni;
 }
 
-public static Inmobiliaria TraerInmobiliaria(string idusuario)
+public static List<Inmobiliaria>  TraerInmobiliaria(int idinmobiliaria)
         {
-         Inmobiliaria inmo = null;
+        List<Inmobiliaria> listaInmobiliarias = new List<Inmobiliaria>();  
           using (SqlConnection db = new SqlConnection(_connectionString)){
-            string SQL = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
-            inmo = db.QueryFirstOrDefault<Inmobiliaria>(SQL, new {pIdUsuario = idusuario});
+            string SQL = "SELECT * FROM Inmobiliaria WHERE IdInmobiliaria = @pIdInmobiliaria";
+            listaInmobiliarias = db.Query<Inmobiliaria>(SQL, new {pIdInmobiliaria = idinmobiliaria}). ToList();
         }
-            return inmo;        
+            return listaInmobiliarias;        
     }
     
 
-public static Propiedades TraerCas(string idpropiedad){
-         Propiedades casa = null;
+public static  List<Propiedades> ObtenerCas(){
+        List<Propiedades> listaPropiedades = new List<Propiedades>();  
           using (SqlConnection db = new SqlConnection(_connectionString))
           {
-            string SQL = "SELECT * FROM Usuario WHERE IdPropiedad = @pIdpropiedad";
-            casa = db.QueryFirstOrDefault<Propiedades>(SQL, new {pIdPropiedad = idpropiedad});
+            string SQL = "SELECT * FROM Propiedades";
+            listaPropiedades = db.Query<Propiedades>(SQL). ToList();
           }
-            return casa;
+            return listaPropiedades;
+        }   
+
+
+public static Propiedades TraerCas(int idpropiedad)
+        {
+            Propiedades ActualCasa = null;
+            using (SqlConnection db = new SqlConnection(_connectionString))
+            {
+                string sql = "SELECT * FROM Propiedades WHERE IdPropiedad = @pIdPropiedad";
+                ActualCasa = db.QueryFirstOrDefault<Propiedades>(sql,new {pIdPropiedad = idpropiedad});
+            }
+            return ActualCasa;
+        }
+public static List<Ubicacion> TraerUbi(int iddireccion){
+    List<Ubicacion> listaDirecciones = new List<Ubicacion>();  
+
+          using (SqlConnection db = new SqlConnection(_connectionString))
+          {
+            string SQL = "SELECT * FROM Ubicacion WHERE IdUbicacion = @pIdUbicacion";
+            listaDirecciones = db.Query<Ubicacion>(SQL, new {pIdDireccion = iddireccion}) . ToList();
+          }
+            return listaDirecciones;
         }   
 
 }

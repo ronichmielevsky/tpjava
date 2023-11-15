@@ -35,8 +35,25 @@ public class HomeController : Controller
     }
       public IActionResult VerCasas()
     {
+        ViewBag.listaPropiedades = BD.ObtenerCas();
         return View("VerCasas");
     }
+
+    public List<Inmobiliaria> VerInfoInmobiliariaAjax(int idinmobiliaria)
+{
+    return BD.TraerInmobiliaria(idinmobiliaria);
+}
+
+
+public Propiedades VerInfoPropiedadesAjax(int idpropiedad)
+    {
+        return BD.TraerCas(idpropiedad);
+    }
+  public List<Ubicacion> VerInfoUbicacionAjax(int iddireccion)
+    {
+        return BD.TraerUbi(iddireccion);
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
