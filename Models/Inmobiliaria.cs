@@ -1,4 +1,4 @@
-public class inmobiliaria{
+public class Inmobiliaria{
     public int IdInmobiliaria{get;set;}
     public string Nombre{get;set;}
      public string Email{get;set;}
@@ -7,10 +7,10 @@ public class inmobiliaria{
     public string ImagenInmobiliaria{get;set;}
     public int Comision{get;set;}
     public int IdUsuario{get;set;}
-public inmobiliaria(){}
+public Inmobiliaria(){}
 
 
-public inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imagenInmobiliaria, int comision, int idusuario ){
+public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imagenInmobiliaria, int comision, int idusuario ){
 
 
     IdInmobiliaria=idinmobiliaria;

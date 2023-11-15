@@ -43,21 +43,21 @@ public static Usuario OlvideCont(string username){
 
 public static Inmobiliaria TraerInmobiliaria(string idusuario)
         {
-         Usuario inmo = null;
+         Inmobiliaria inmo = null;
           using (SqlConnection db = new SqlConnection(_connectionString)){
             string SQL = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
-            inmo = db.QueryFirstOrDefault<Usuario>(SQL, new {pIdUsuario = idusuario});
+            inmo = db.QueryFirstOrDefault<Inmobiliaria>(SQL, new {pIdUsuario = idusuario});
         }
             return inmo;        
     }
     
 
 public static Propiedades TraerCas(string idpropiedad){
-         Usuario casa = null;
+         Propiedades casa = null;
           using (SqlConnection db = new SqlConnection(_connectionString))
           {
             string SQL = "SELECT * FROM Usuario WHERE IdPropiedad = @pIdpropiedad";
-            casa = db.QueryFirstOrDefault<Usuario>(SQL, new {pIdPropiedad = idpropiedad});
+            casa = db.QueryFirstOrDefault<Propiedades>(SQL, new {pIdPropiedad = idpropiedad});
           }
             return casa;
         }   
