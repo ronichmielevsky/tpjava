@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Su UserName es: @ViewBag.roni.UserName</p>
-    <p>Su Nombre es: @ViewBag.roni.Nombre</p>
-    <p>Su Email es: @ViewBag.roni.Email</p>
-    <p>Su Telefono es: @ViewBag.roni.Telefono</p>
+    <p>UserName: @ViewBag.roni.UserName</p>
+    <p>Nombre: @ViewBag.roni.Nombre</p>
+    <p>Email: @ViewBag.roni.Email</p>
+    <p>Telefono: @ViewBag.roni.Telefono</p>
+
+    <small class="text-muted"><a href='@Url.Action("IrInicio","Home")'><button>Ir al Inicio</button></a></small>
 </body>
 </html>

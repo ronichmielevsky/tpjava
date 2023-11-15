@@ -5,36 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    <form method="post" action='@Url.Action("AgregarAcount","Acount")'>
-      <p>@ViewBag.Error</p>
-        <p> User: </p>
-      <div class="form-group 4">
-        <input autocomplete="off" type="text" name="username" required> 
-    </div>
+    <form class="form" method="post" action="@Url.Action("AgregarAcount", "Acount")">
+    <p class="title">Register</p>
+    <p class="message">Signup now and get full access to our app.</p>
 
-    <p> Password: </p>
-      <div class="form-group 4">
-        <input autocomplete="off" type="password" name="contraseña" id="psw" required> 
-    </div>
+        <div class="form-group">
+            <label>
+                <input autocomplete="off" type="text" name="username" required>
+                <span>User</span>
+            </label>
+        </div>
 
-    <p> Nombre: </p>
-      <div class="form-group 4">
-        <input autocomplete="off" type="text" name="nombre" required> 
-    </div>
+        <div class="form-group">
+            <label>
+                <input autocomplete="off" type="password" name="contraseña" id="psw" required>
+                <span>Password</span>
+            </label>
+        </div>
 
-    <p> Email: </p>
-      <div class="form-group 4">
-        <input autocomplete="off" type="text" name="email" required> 
-    </div>
+        <div class="form-group">
+            <label>
+                <input autocomplete="off" type="text" name="nombre" required>
+                <span>Nombre</span>
+            </label>
+        </div>
 
-    <p> Telefono: </p>
-      <div class="form-group 4">
-        <input autocomplete="off" type="text" name="telefono" required> 
-    </div>
-        <input  class="btn btn-success"  type="submit" name="" id="enviarRegister">
-    </form>
+        <div class="form-group">
+            <label>
+                <input autocomplete="off" type="text" name="email" required>
+                <span>Email</span>
+            </label>
+        </div>
 
+        <div class="form-group">
+            <label>
+                <input autocomplete="off" type="text" name="telefono" required>
+                <span>Telefono</span>
+            </label>
+        </div>
+
+                 <input class="btn btn-success" type="submit" name="">
+</form>
 </body>
 </html>
