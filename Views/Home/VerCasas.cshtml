@@ -4,9 +4,10 @@
   <link rel="stylesheet" href="site.css">
 <div class="text-center">
       <h1>Selecciona tu propiedad favorita</h1>
+<div class="Tarjetas">
       @foreach (Propiedades item in ViewBag.listaPropiedades)
       {
-          <div class="card" style="width: 18rem;">
+          <div class="card">
             <img src="@item.ImagenPropiedad" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title"><p>@item.TipoPropiedad</p></h5>

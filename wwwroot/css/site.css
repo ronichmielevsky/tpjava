@@ -1,5 +1,6 @@
-html {
-  font-size: 14px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -60,37 +61,22 @@ h3{
 
 
 .card {
-  width: 1000px;
-  border-radius: .25rem;
+  border-radius: 2.5px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border: 2px solid #ab4b38;
-  margin-left: 400px;
-  display: flex;
-  position: relative;
+  margin-left: 20px;
   justify-content: center;
-  flex-direction: column;
-  min-width: 450px;
-  word-wrap: break-word;
   background-color: #f5f5dc;
   background-clip: border-box;
-  float: right;
 }
-.card {
-  
-  display: flex;
-  
 
- 
-  border: 1px solid rgba(0,0,0,.125);
-
-}
 
 .card a {
   text-decoration: none
 }
 
 .content {
-  padding: 2rem;
+  padding: 300px;
 }
 
 .image {
