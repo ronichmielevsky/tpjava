@@ -275,3 +275,22 @@ h3{
       opacity: 0;
   }
 }
+.Inicio{
+  font-style: italic;
+  display: flex;
+  justify-content:space-around;  
+}
+.Inicio2{
+margin-left: 40px;
+margin-right: 40px;
+display: flex;
+justify-content: space-around;
+}
+.IMGinicio, h6{
+  padding-bottom: 30px;
+  text-align: center;
+}
+.Inicio2,h5{
+display: flex;
+justify-content: flex-start;
+}
