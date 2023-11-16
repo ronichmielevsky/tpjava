@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "VerCasas";
 }
-
+  <link rel="stylesheet" href="site.css">
 <div class="text-center">
       <h1>Selecciona tu propiedad favorita</h1>
       @foreach (Propiedades item in ViewBag.listaPropiedades)
@@ -9,8 +9,8 @@
           <div class="card" style="width: 18rem;">
             <img src="@item.ImagenPropiedad" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title"><h2>@item.TipoPropiedad</h2> </h5>
-                <h5 class="card-title"><h4>@item.Descripcion</h4> </h5>
+                <h5 class="card-title"><p>@item.TipoPropiedad</p></h5>
+                <h5 class="card-title"><p>@item.Descripcion</p> </h5>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInmo" onclick="MostrarInmo(@item.IdInmobiliaria)">Ver info Inmobiliaria</button>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalProp"onclick="MostrarProp(@item.IdPropiedad)" >Ver info Propiedad</button>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalUbi"onclick="MostrarUbi(@item.IdDireccion)" >Ver info Ubicacion</button>
@@ -29,7 +29,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="TextoModalInmobiliaria" class="modal-body">
-        aaaaaa
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -78,3 +77,4 @@
     </div>
   </div>
 </div>
+

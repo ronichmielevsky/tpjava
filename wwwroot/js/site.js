@@ -56,14 +56,7 @@ function MostrarProp(id) {
              success:
                  function(response)  //en este caso response es una lista de PROPIEDADES
                  {   
-                    texto = ""
-                    
-                    response.forEach(element => {                        
-                        texto += "<b>" + element.Descripcion + "</b><br>Propiedad: " +  element.TipoPropiedad + "<br>Precio: " + element.Precio + "<br>Ambiente: " + element.Ambiente 
-                    });
-                    console.log(texto)
-                    $("#TextoModalPropiedad").html(texto);
-                    
+                    $("#TextoModalPropiedad").html(response.tipopropiedad);
                 }
         });
  }
@@ -82,7 +75,7 @@ function MostrarProp(id) {
                     texto = ""
                     
                     response.forEach(element => {                        
-                        texto += "<b>" + element.Calle + "</b><br>Altura: " +  element.Altura + "<br>Barrio: " + element.Barrio + "<br>Descripcion: " + element.Descripcion 
+                        texto += "<b>" + element.calle + "</b><br>Altura: " +  element.altura + "<br>Barrio: " + element.barrio + "<br>Descripcion: " + element.descripcion 
                     });
                     console.log(texto)
                     $("#TextoModalUbicacion").html(texto);
