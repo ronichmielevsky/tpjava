@@ -72,6 +72,19 @@ h3{
   margin-bottom: 20px;
 }
 
+.Boton-comprar{
+  padding:.375rem .75rem;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #084d06;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
 
 .card a {
   text-decoration: none
