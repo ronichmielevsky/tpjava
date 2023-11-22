@@ -30,7 +30,7 @@ function MostrarInmo(id) {
             dataType:'JSON',                
             data:{IdInmobiliaria: id},
             success:
-                function(response) //en este caso response es un objeto INMOBILIARIA
+                function(response) //en este caso response es una lista INMOBILIARIA
                 {                        
                      texto = ""
                     
@@ -47,40 +47,43 @@ function MostrarInmo(id) {
 
 
 function MostrarProp(id) {        
-     $.ajax(
-       {
-             url:'/Home/VerInfoPropiedadesAjax',
-             type:'GET',
-           dataType:'JSON',                
-             data:{IdPropiedad: id},
-             success:
-                 function(response)  //en este caso response es una lista de PROPIEDADES
-                 {   
-                    $("#TextoModalPropiedad").html(response.tipopropiedad);
-                }
-        });
- }
+    $.ajax({
+        url: '/Home/VerInfoPropiedadesAjax',
+        type: 'GET',
+        dataType: 'JSON',
+        data: { IdPropiedad: id },
+        success: function (response) {
+            console.log(response);
+            $("#TextoModalPropiedad").html(
+                "<b><p><br>Tipo de Propiedad:</b> " + (response.tipoPropiedad) + "</p>" + 
+                "<b><p><br>Descripción: </b> " + (response.descripcion) + "</p>" +
+                "<b><p><br>Precio: </b> " + "$" + (response.precio) + "</p>" +
+                "<b><p><br>Ambiente/s:</b> " + (response.ambiente) + "</p>"
+            );
+        }
+    });
+}
 
 
- function MostrarUbi(id) {        
+  function MostrarUbi(id) {        
     $.ajax(
-      {
+       {
             url:'/Home/VerInfoUbicacionAjax',
             type:'GET',
-          dataType:'JSON',                
-            data:{IdDireccion: id},
+           dataType:'JSON',                
+             data:{IdDireccion: id},
             success:
-                function(response)  //en este caso response es una lista de UBICACIONES
+                 function(response)  //en este caso response es una lista de UBICACIONES
                 {   
                     texto = ""
                     
                     response.forEach(element => {                        
-                        texto += "<b>" + element.calle + "</b><br>Altura: " +  element.altura + "<br>Barrio: " + element.barrio + "<br>Descripcion: " + element.descripcion 
+                        texto += "<b><br>Calle: </b> " + element.calle + "<b><br>Altura: </b> " +  element.altura + "<b><br>Barrio: </b> " + element.barrio + "<b><br>Descripcion de la zona: </b> " + element.descripcion 
                     });
                     console.log(texto)
-                    $("#TextoModalUbicacion").html(texto);
+                     $("#TextoModalUbicacion").html(texto);
                     
                 }
         });
-}
+ }
 

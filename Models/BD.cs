@@ -78,7 +78,7 @@ public static List<Ubicacion> TraerUbi(int iddireccion){
 
           using (SqlConnection db = new SqlConnection(_connectionString))
           {
-            string SQL = "SELECT * FROM Ubicacion WHERE IdUbicacion = @pIdUbicacion";
+            string SQL = "SELECT * FROM Ubicacion WHERE IdDireccion = @pIdDireccion";
             listaDirecciones = db.Query<Ubicacion>(SQL, new {pIdDireccion = iddireccion}) . ToList();
           }
             return listaDirecciones;
