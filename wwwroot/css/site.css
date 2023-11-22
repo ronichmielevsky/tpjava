@@ -286,4 +286,15 @@ justify-content: space-around;
 display: flex;
 justify-content: flex-start;
 }
-
+.TituloVender{
+  padding-top: 40px;
+  font-style: italic;
+  text-align: center;
+}
+.TituloVender1{
+  font-style: italic;
+  text-align: center;
+}
+.FormContacto{
+  padding-top: 100px;
+}

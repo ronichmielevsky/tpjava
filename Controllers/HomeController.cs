@@ -33,6 +33,14 @@ public class HomeController : Controller
     {
         return View("Buscador");
     }
+    public IActionResult FinalizarCompra()
+    {
+        return View("FinalizarCompra");
+    }
+    public IActionResult Comprar()
+    {
+        return View("Comprar");
+    }
       public IActionResult VerCasas()
     {
         ViewBag.listaPropiedades = BD.ObtenerCas();
