@@ -35,7 +35,7 @@ function MostrarInmo(id) {
                      texto = ""
                     
                     response.forEach(element => {                        
-                        texto += "<b>" + element.nombre + "</b><br>Mail: " +  element.email + "<br>Telefono: " + element.telefono + "<br>Dirección: " + element.direccion + "<br> Comision: " + element.comision
+                        texto += "<b><br> Nombre Inmobiliaria: </b> " + element.nombre + "<b><br>Mail: </b> " +  element.email + "<b><br>Telefono: </b> " + element.telefono + "<b><br>Dirección: </b> " + element.direccion + "<b><br> Comision: </b> " + "$" + element.comision
                     });
                     console.log(texto)
                     $("#TextoModalInmobiliaria").html(texto);
@@ -55,10 +55,10 @@ function MostrarProp(id) {
         success: function (response) {
             console.log(response);
             $("#TextoModalPropiedad").html(
-                "<b><p><br>Tipo de Propiedad:</b> " + (response.tipoPropiedad) + "</p>" + 
-                "<b><p><br>Descripción: </b> " + (response.descripcion) + "</p>" +
-                "<b><p><br>Precio: </b> " + "$" + (response.precio) + "</p>" +
-                "<b><p><br>Ambiente/s:</b> " + (response.ambiente) + "</p>"
+                "<b><br>Tipo de Propiedad:</b> " + (response.tipoPropiedad) +  
+                "<b><br>Descripción: </b> " + (response.descripcion) + 
+                "<b><br>Precio: </b> " + "$" + (response.precio) + 
+                "<b><br>Ambiente/s:</b> " + (response.ambiente) 
             );
         }
     });
