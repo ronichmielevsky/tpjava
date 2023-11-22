@@ -33,6 +33,11 @@ public class HomeController : Controller
     {
         return View("Buscador");
     }
+
+     public IActionResult VerMensaje()
+    {
+        return View("VerMensaje");
+    }
     public IActionResult FinalizarCompra()
     {
         return View("FinalizarCompra");
