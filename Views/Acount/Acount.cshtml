@@ -1,53 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<link rel="stylesheet" href="/css/ac.css">
+<div class="form">
+    <form class="iao" method="post" action='@Url.Action("AgregarAcount","Acount")'>
+    <p class="title">Register </p>
+    <p class="message">Signup now and get full access to our app. </p>
+        <div class="flex">
+        <label>
+            <input required="" placeholder="" type="text" name="nombre" class="input">
+            <span>Nombre</span>
+        </label>
 
-</head>
-<body>
-    <form class="form" method="post" action="@Url.Action("AgregarAcount", "Acount")">
-    <p class="title">Register</p>
-    <p class="message">Signup now and get full access to our app.</p>
+        <label>
+            <input required="" placeholder="" type="text" name="username" class="input">
+            <span>Usuario</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input required="" placeholder="" type="email" name="email" class="input">
+        <span>Email</span>
+    </label> 
 
-        <div class="form-group">
-            <label>
-                <input autocomplete="off" type="text" name="username" required>
-                <span>User</span>
-            </label>
-        </div>
-
-        <div class="form-group">
-            <label>
-                <input autocomplete="off" type="password" name="contraseña" id="psw" required>
-                <span>Password</span>
-            </label>
-        </div>
-
-        <div class="form-group">
-            <label>
-                <input autocomplete="off" type="text" name="nombre" required>
-                <span>Nombre</span>
-            </label>
-        </div>
-
-        <div class="form-group">
-            <label>
-                <input autocomplete="off" type="text" name="email" required>
-                <span>Email</span>
-            </label>
-        </div>
-
-        <div class="form-group">
-            <label>
-                <input autocomplete="off" type="text" name="telefono" required>
-                <span>Telefono</span>
-            </label>
-        </div>
-
-                 <input class="btn btn-success" type="submit" name="">
+    <label>
+        <input required="" placeholder="" type="text" name="telefono" class="input">
+        <span>Telefono</span>
+    </label> 
+        
+    <label>
+        <input required="" placeholder="" type="password" name="contraseña" class="input">
+        <span>Contraseña</span>
+    </label>
+    <input class="submit" type="submit"/>
+    <p class="signin">¿Ya tenes una cuenta? <a href='@Url.Action("IniciarSesion","Acount")'>Sign in</a> </p>
 </form>
-</body>
-</html>
+</div>

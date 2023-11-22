@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,11 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action='@Url.Action("Login","Acount")'>
+    <form class="iao" method="post" action='@Url.Action("Login","Acount")'>
         <div class="form_container">
             <div class="logo_container"></div>
             <div class="title_container">
-                <p class="title">Login to your Account</p>
+                <p class="">Reistrate con tu cuenta</p>
                 <span class="subtitle">Get started with our app, just create an account and enjoy the experience.</span>
             </div>
             <br>
@@ -42,8 +43,7 @@
         <hr class="line">
     </div>
 
-    <button title="Sign In" type="submit" class="sign-in_ggl">
-        <!-- Google Sign In button code -->
+    <button title="Sign In" type="submit" class="sign-in_ggl" > <a href='@Url.Action("Registrarse","Acount")'>Registrarse</a>
     </button>
 
     <button title="Sign In" type="submit" class="sign-in_apl">
