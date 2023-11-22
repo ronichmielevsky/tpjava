@@ -111,6 +111,10 @@
   text-decoration: none;
 }
 
+body.IniciarSes header {
+  display: none;
+}
+
 .sign-in_ggl {
   width: 100%;
   height: 40px;

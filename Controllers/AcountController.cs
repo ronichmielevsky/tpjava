@@ -37,7 +37,7 @@
             ViewBag.Error = "El nombre de usuario ya existe";
             return View("Acount");
          }
-         else{ return View("MostrarDatos");}
+         else{ return RedirectToAction("Inicio" , "Home");}
     }
 
     public IActionResult Olvide()
@@ -63,7 +63,7 @@
         ViewBag.roni =BD.VerificarCuenta(username, contraseña);
         if (ViewBag.roni!=null)        
         {
-                  return View("MostrarDatos");
+            return RedirectToAction("Inicio" , "Home");
         }
         else
         {
