@@ -21,6 +21,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+h1, h6, h5{
+  font-family: Helvetica Neue;
+  
+}
+
 .Inicio{
 margin-top: 100px;
 }
@@ -58,6 +64,8 @@ margin-top: 100px;
 h3{
   font-style: italic;
 }
+
+
 
 
 .card {
@@ -310,4 +318,10 @@ justify-content: flex-start;
 }
 .FormContacto{
   padding-top: 100px;
+}
+
+.imagen-logo{
+  width:70px;
+  height: 75px;
+  margin-left: 225px;
 }
