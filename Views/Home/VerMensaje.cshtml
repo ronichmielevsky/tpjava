@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="/css/pag.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="TituloVender">
-      <h1>Su formulario ha sido enviado con exito</h1>
-      </div>
-      <div class="TituloVender1">
-      <h6>Pronto nos contactaremos con usted</h6>
-      </div>
-      <small class="text-muted"><a href='@Url.Action("inicio","Home")'><button type="button" class="btn btn-primary">Volver al inicio</button></a></small>
+  <form class="form">
+    <div class="banner"></div>
+    <label class="iao">Confirmar Compra</label>
+    <p class="description">Al aceptar nuestros terminos y condiciones nos daras permiso a acceder a tus datos y asi brindarte una experiencia segura </p>
+    <div class="tab-container">
+      <button class="tab tab--1">Mensual</button>
+      <button class="tab tab--2">Anual</button>
+      <div class="indicator"></div>
+    </div>
+
+    <div class="benefits">
+      <span>¿Que ofrecemos?</span>
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+            <rect fill="black" rx="8" height="16" width="16"></rect>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+          </svg>
+          <span>Seguridad absoluta y garantia en caso de fallo</span>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="16" width="16">
+            <rect fill="black" rx="8" height="16" width="16"></rect>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="M5 8.5L7.5 10.5L11 6"></path>
+          </svg>
+          <span>Te llegaran todos los recibos a tu cuenta de Email.</span>
+        </li>
+      </ul>
+    </div>
+      <label class="price"><sup>$</sup>1.500<sub>/mo</sub></label>
+      <a href='@Url.Action("cp","Home")'><button type="button" class="upgrade-btn">Comprar</button></a>
+    </div>  
+  </form>
+</div>
 </body>
 </html>

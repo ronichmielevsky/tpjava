@@ -52,6 +52,11 @@ public class HomeController : Controller
         return View("VerCasas");
     }
 
+     public IActionResult cp()
+    {
+        return View("cp");
+    }
+
     public List<Inmobiliaria> VerInfoInmobiliariaAjax(int idinmobiliaria)
 {
     return BD.TraerInmobiliaria(idinmobiliaria);

@@ -4,13 +4,12 @@ public class Inmobiliaria{
      public string Email{get;set;}
     public int Telefono{get;set;}
     public string Direccion{get;set;}
-    public string ImagenInmobiliaria{get;set;}
+    public string imagenInmobiliaria{get;set;}
     public int Comision{get;set;}
-    public int IdUsuario{get;set;}
 public Inmobiliaria(){}
 
 
-public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imagenInmobiliaria, int comision, int idusuario ){
+public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision){
 
 
     IdInmobiliaria=idinmobiliaria;
@@ -18,9 +17,8 @@ public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefon
     Email=email;
     Telefono=telefono;
     Direccion=direccion;
-    ImagenInmobiliaria=imagenInmobiliaria;
+    imagenInmobiliaria=imageninmobiliaria;
     Comision=comision;
-    IdUsuario=idusuario;
    
 }
 }

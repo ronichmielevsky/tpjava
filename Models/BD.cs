@@ -84,4 +84,12 @@ public static List<Ubicacion> TraerUbi(int iddireccion){
             return listaDirecciones;
         }   
 
+public static void AgregarInmobiliaria(Inmobiliaria inmo){
+    string SQL = "INSERT INTO Inmobiliaria(Nombre,Email, Telefono,Direccion,Comision) VALUES (@nombre, @email, @telefono, @direccion, @comision)";
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Execute(SQL, new { nombre = inmo.Nombre, email=inmo.Email, telefono=inmo.Telefono, direccion=inmo.Direccion, comision=inmo.Comision});
+        }
+}
+
 }
