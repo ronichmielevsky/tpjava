@@ -18,6 +18,29 @@ html {
   min-height: 100%;
 }
 
+h1{
+  margin-bottom: 30px;
+}
+
+.btn-primary0{
+  border: 0ch;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background-color: #003da5;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  height: 35px;
+}
+
+.btn-primary1{
+  border: 0ch;
+  border-radius: 10px;
+  background-color: #ff8e24;
+  color:rgb(255, 255, 255);
+  width: 120px;
+  height: 35px;
+}
+
 body {
   margin-bottom: 60px;
 }
@@ -61,15 +84,16 @@ h3{
 
 
 .card {
-  border-radius: 2.5px;
+  border-radius: 5px;
   box-shadow: 0 0 rgba(0, 0, 0, 0.5);   
   margin-left: 20px;
   justify-content: center;
-  background-color: #f5f5dc;
+  background-color: #ffffff;
   background-clip: border-box;
-  width: 390px;
+  width: 403px;
   display: inline-block;
   margin-bottom: 20px;
+  border: 1px solid #d3d2d2;
 }
 
 .Boton-comprar{
