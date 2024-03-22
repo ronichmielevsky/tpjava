@@ -92,4 +92,13 @@ public static void AgregarInmobiliaria(Inmobiliaria inmo){
         }
 }
 
-}
+//  public static TraerEstadoPropiedad (int idinmobiliaria){ //AGREGAR ESTADO
+//             Inmobiliaria estado = false;
+//          using (SqlConnection db = new SqlConnection(_connectionString))
+//           {
+//             string SQL = "SELECT Estado FROM Inmobiliaria WHERE IdInmobiliaria = @pIdInmobiliaria";
+//             estado = db.QueryFirstOrDefault<Inmobiliaria>(SQL, new {pIdInmobiliaria = idinmobiliaria});
+//           }
+//             return estado;
+//         }   
+    }

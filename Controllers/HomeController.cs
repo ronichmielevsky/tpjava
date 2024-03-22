@@ -62,6 +62,11 @@ public class HomeController : Controller
     return BD.TraerInmobiliaria(idinmobiliaria);
 }
 
+// public Inmobiliaria TraerEstado(int idinmobiliaria){
+//     ViewBag.estado = BD.TraerEstadoPropiedad(idinmobiliaria);
+//     //ViewBag.estado = true;
+//     return View("VerCasas");
+// }
 
 public Propiedades VerInfoPropiedadesAjax(int idpropiedad)
     {

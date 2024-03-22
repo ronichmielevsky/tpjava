@@ -8,6 +8,7 @@ public class Inmobiliaria{
     public int Comision{get;set;}
 public Inmobiliaria(){}
 
+//agregar los campos faltamtes de la base de datos en el Model 
 
 public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision){
 

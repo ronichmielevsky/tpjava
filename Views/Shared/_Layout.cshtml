@@ -32,6 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Ayuda</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#ModalInmo" style="cursor: pointer;">Cerrar sesion</a>
+                        </li>
                     </ul>
                 </div>
                 </div>
@@ -42,6 +45,25 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>
+
+        <!-- Modal -->
+    <div class="modal fade" id="ModalInmo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">¿Estas seguro de Cerrar Sesion?</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="TextoModalInmobiliaria">
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='../../Acount/IniciarSes';" data-bs-dismiss="modal">SI</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+        </div>
+        </div>
+    </div> 
     </div>
 
     <footer class="border-top footer text-muted">
