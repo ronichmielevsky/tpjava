@@ -7,8 +7,8 @@
 
 <div class="Tarjetas">
       @foreach (Propiedades item in ViewBag.listaPropiedades)
-      {
-      //  if (ViewBag.estado == true){
+      
+      if (item.Estado == true){
           <div class="card">
               <button type="button" class="" data-bs-toggle="modal" data-bs-target="#ModalInmo" onclick="MostrarInmo(@item.IdInmobiliaria)"><img src="@item.ImagenPropiedad" class="card-img-top"></button>
             <div class="card-body">

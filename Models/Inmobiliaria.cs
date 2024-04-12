@@ -5,12 +5,14 @@ public class Inmobiliaria{
     public int Telefono{get;set;}
     public string Direccion{get;set;}
     public string imagenInmobiliaria{get;set;}
+
+    public int IdUsuario{get;set;}
     public int Comision{get;set;}
 public Inmobiliaria(){}
 
 //agregar los campos faltamtes de la base de datos en el Model 
 
-public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision){
+public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision,int idusuario){
 
 
     IdInmobiliaria=idinmobiliaria;
@@ -19,6 +21,7 @@ public Inmobiliaria(int idinmobiliaria, string nombre, string email, int telefon
     Telefono=telefono;
     Direccion=direccion;
     imagenInmobiliaria=imageninmobiliaria;
+    IdUsuario=idusuario;
     Comision=comision;
    
 }

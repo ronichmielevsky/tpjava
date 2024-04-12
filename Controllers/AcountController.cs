@@ -21,9 +21,9 @@
     }
 
      [HttpPost]
-     public IActionResult AgregarAcount(string username, string contraseña, string nombre, string email, int telefono){
+     public IActionResult AgregarAcount(string username, string contraseña, string nombre, string email, int telefono,int idusuario){
         int cont=0;
-        Usuario user = new Usuario(username, contraseña, nombre, email, telefono);
+        Usuario user = new Usuario(username, contraseña, nombre, email, telefono,idusuario);
         BD.AgregarCuenta(user);
         ViewBag.roni = user;
         List<string> _usuarios=BD.ListarUsuarios();

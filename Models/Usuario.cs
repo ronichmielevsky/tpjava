@@ -1,4 +1,5 @@
 public class Usuario{
+    public int IdUsuario{get;set;}
     public string UserName{get;set;}
     public string Contraseña{get;set;}
     public string Nombre{get;set;}
@@ -7,12 +8,14 @@ public class Usuario{
 
 public Usuario(){}
 
-public Usuario(string username, string contraseña, string nombre, string email, int telefono){
+public Usuario(string username, string contraseña, string nombre, string email, int telefono,int idusuario){
 
     UserName=username;
     Contraseña=contraseña;
     Nombre=nombre;
     Email=email;
     Telefono=telefono;
+    IdUsuario=idusuario;
+
 }
 }

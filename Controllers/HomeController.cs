@@ -49,6 +49,8 @@ public class HomeController : Controller
       public IActionResult VerCasas()
     {
         ViewBag.listaPropiedades = BD.ObtenerCas();
+       
+
         return View("VerCasas");
     }
 
