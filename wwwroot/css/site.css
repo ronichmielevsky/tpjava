@@ -351,7 +351,7 @@ justify-content: flex-start;
 .imagen-logo{
   width:70px;
   height: 75px;
-  margin-left: 225px;
+  margin-left: 350px;
 }
 
 .rating:not(:checked) > input {
