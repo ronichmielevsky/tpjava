@@ -58,19 +58,19 @@
         return View("OlvideContraseña");
     }
 
- [HttpPost]
-     public IActionResult Login(string username, string contraseña){
-        ViewBag.roni =BD.VerificarCuenta(username, contraseña);
-        if (ViewBag.roni!=null)        
-        {
-            return RedirectToAction("Inicio" , "Home");
-        }
-        else
-        {
-            ViewBag.Error = "Usuario o Contraseña invalidos";
-            return View("IniciarSes");
-        }
-     }
-   
-     
+[HttpPost]
+public IActionResult Login(string username, string contraseña)
+{
+    ViewBag.roni = BD.VerificarCuenta(username, contraseña);
+    if (ViewBag.roni != null)        
+    {
+        return RedirectToAction("Inicio", "Home", new { username = username });
+    }
+    else
+    {
+        ViewBag.Error = "Usuario o Contraseña invalidos";
+        return View("IniciarSes");
+    }
 }
+}
+

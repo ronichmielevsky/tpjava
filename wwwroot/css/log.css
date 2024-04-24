@@ -5,6 +5,13 @@
   
 }
 
+.error{
+  color: red;
+  margin-top: -40px;
+  margin-bottom: -40px;
+ }
+ 
+
 .form_container {
   width: fit-content;
   height: fit-content;

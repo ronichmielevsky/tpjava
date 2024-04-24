@@ -9,11 +9,7 @@ public class Propiedades{
     public int IdInmobiliaria{get;set;}
     public bool Estado{get;set;}
 
-    public int Latitud{get;set;}
-    
-    public int Longitud{get;set;}
 
-    public int idCompras{get;set;}
 
 
 
@@ -22,7 +18,7 @@ public class Propiedades{
 public Propiedades(){}
 
 
-public Propiedades(int idpropiedad,string descripcion,string tipopropiedad, int precio,string ambiente,string imagenpropiedad,int iddireccion,int idinmobiliaria, bool estado, int latitud, int longitud, int idcompras ){
+public Propiedades(int idpropiedad,string descripcion,string tipopropiedad, int precio,string ambiente,string imagenpropiedad,int iddireccion,int idinmobiliaria, bool estado){
 
 
     IdPropiedad=idpropiedad;
@@ -34,10 +30,6 @@ public Propiedades(int idpropiedad,string descripcion,string tipopropiedad, int 
     IdDireccion=iddireccion;
     IdInmobiliaria=idinmobiliaria;
     Estado=estado;
-    Latitud=latitud;
-    Longitud=longitud;
-    idCompras=idcompras;
-
 
 }
 }

@@ -1,6 +1,5 @@
 public class Ubicacion{
     public int IdDireccion{get;set;}
-    public int IdUsuario {get;set;}
     public string Calle{get;set;}
     public int Altura{get;set;}
     public string Barrio{get;set;}
@@ -8,7 +7,7 @@ public class Ubicacion{
 public Ubicacion(){}
 
 
-public Ubicacion(int iddireccion,string descripcion,string barrio, int altura,string calle,int idusuario){
+public Ubicacion(int iddireccion,string descripcion,string barrio, int altura,string calle){
 
 
     IdDireccion=iddireccion;
@@ -16,6 +15,5 @@ public Ubicacion(int iddireccion,string descripcion,string barrio, int altura,st
     Barrio=barrio;
     Altura=altura;
     Calle=calle;
-    IdUsuario=idusuario;
 }
 }

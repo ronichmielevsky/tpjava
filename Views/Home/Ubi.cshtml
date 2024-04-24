@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="TituloVender">
+      <h1>Sigue con el formulario</h1>
+      </div>
+      <div class="TituloVender1">
+      <h6>Porfavor complete los datos de la Ubicacion</h6>
+      </div>
+      <form method="post" action='@Url.Action("Ubica","Home")'>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Nombre de la Calle</label>
+    <input type="text" class="form-control" name="calle" id="exampleInputPassword1">
+  </div>
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Altura de la propiedad</label>
+    <input type="number" class="form-control" name="altura" id="exampleInputPassword1">
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Barrio de la propiedad</label>
+    <input type="text" class="form-control" name="barrio" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Descripcion de la zona</label>
+    <input type="text" class="form-control" name="descripcion" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+    </body>
+    </html>
+    
+    
+    

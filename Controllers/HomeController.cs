@@ -17,10 +17,13 @@ public class HomeController : Controller
     {
         return RedirectToAction("IniciarSesion" , "Acount");
     }
-    public IActionResult Inicio()
+
+   public IActionResult Inicio(string username)
     {
+        ViewBag.Username = username;
         return View("Inicio");
     }
+
     public IActionResult Vender()
     {
         return View("Vender");
@@ -64,6 +67,30 @@ public class HomeController : Controller
     return BD.TraerInmobiliaria(idinmobiliaria);
 }
 
+
+[HttpPost]
+public IActionResult Venta(int idpropiedad, string tipopropiedad, string descripcion, int precio, string ambiente, string imagenpropiedad, int iddireccion, int idinmobiliaria, bool estado)
+{
+    Propiedades prop = new Propiedades(idpropiedad, descripcion, tipopropiedad, precio, ambiente, imagenpropiedad, iddireccion, idinmobiliaria, estado=true);
+    BD.AgregarPropiedad(prop);
+    return View("Inmo");
+}
+
+[HttpPost]
+public IActionResult Inmobi(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision)
+{
+    Inmobiliaria inmo = new Inmobiliaria(idinmobiliaria, nombre, email, telefono, direccion, imageninmobiliaria, comision);
+    BD.AgregarInmobiliaria(inmo);
+    return View("Ubi");
+}
+
+[HttpPost]
+public IActionResult Ubica(int iddireccion,string descripcion,string barrio, int altura,string calle)
+{
+    Ubicacion ubi = new Ubicacion(iddireccion, descripcion, barrio, altura, calle);
+    BD.AgregarUbicacion(ubi);
+    return View("Inicio");
+}
 // public Inmobiliaria TraerEstado(int idinmobiliaria){
 //     ViewBag.estado = BD.TraerEstadoPropiedad(idinmobiliaria);
 //     //ViewBag.estado = true;
@@ -86,3 +113,6 @@ public Propiedades VerInfoPropiedadesAjax(int idpropiedad)
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
+
+
+

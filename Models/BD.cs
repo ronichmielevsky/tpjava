@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Dapper;
 
 static class BD{
-    private static string _connectionString = @"server=localhost;DataBase=login;Trusted_connection=True;";
+    private static string _connectionString = @"server=PAPUNETA\SQLEXPRESS;DataBase=Login;Trusted_connection=True;";
     
 public static void AgregarCuenta(Usuario user){
     string SQL = "INSERT INTO Usuario(Username,Contraseña,Nombre,Email,Telefono) VALUES (@username, @contraseña, @nombre, @email, @telefono)";
@@ -21,6 +21,17 @@ public static List<string> ListarUsuarios(){
             _usuarios = db.Query<string>(SQL).ToList();;
         }
         return _usuarios;
+}
+
+public static List<string> ListarPropiedades(){
+    List<string> _propiedades=null;
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string SQL = "SELECT IdPropiedad FROM Propiedades";
+            _propiedades = db.Query<string>(SQL).ToList();;
+        }
+        return _propiedades;
+
 }
 public static Usuario VerificarCuenta(string username, string contraseña){
     Usuario roni = new Usuario();
@@ -101,5 +112,24 @@ public static void AgregarInmobiliaria(Inmobiliaria inmo){
           }
             return estado;
         }   
-    }
+    
+
+
 // hacer una funcion que reciba el id de propiedad y cambie el estado a false
+
+public static void AgregarPropiedad(Propiedades prop){
+    string SQL = "INSERT INTO Propiedades( descripcion, tipopropiedad, precio, ambiente,  idinmobiliaria, estado) VALUES (@descripcion, @tipopropiedad, @precio, @ambiente, @imagenpropiedad, @estado)";
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Execute(SQL, new { tipopropiedad = prop.TipoPropiedad, descripcion = prop.Descripcion, precio = prop.Precio, ambiente = prop.Ambiente, imagenpropiedad = prop.ImagenPropiedad, estado=true}); 
+        }
+}
+
+public static void AgregarUbicacion(Ubicacion ubi){
+    string SQL = "INSERT INTO Ubicacion(descripcion, barrio, altura, calle) VALUES (@descripcion, @barrio, @altura, @calle)";
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Execute(SQL, new { descripcion = ubi.Descripcion, barrio=ubi.Barrio, altura = ubi.Altura, calle = ubi.Calle}); 
+        }
+}
+}
