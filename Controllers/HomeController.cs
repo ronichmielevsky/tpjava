@@ -9,6 +9,7 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
 
     private int _iddireccion;
+        private int _idpropiedad;
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
@@ -38,32 +39,25 @@ public class HomeController : Controller
     {
         return View("Buscador");
     }
-    //COMPRA
-     public IActionResult VerMensaje(int _idpropiedad)
+     public IActionResult VerMensaje(int idPropiedad)
     {
-        Console.WriteLine(_idpropiedad);
-        BD.CambiarEstadoPropiedad(_idpropiedad);
+        Console.WriteLine(idPropiedad);
+        BD.CambiarEstadoPropiedad(idPropiedad);
         return View("VerMensaje");
     }
-    //COMPRA
     public IActionResult FinalizarCompra()
     {
         
         return View("FinalizarCompra");
     }
-
-    private int _idpropiedad;
-
-
-    //NO FUNCIONA, DA ERROR LA PAGINA (405 NO FUNCIONA)
+    
     public IActionResult Comprar(int idPropiedad)
     {
-        _idpropiedad=idPropiedad;
+        Console.WriteLine(idPropiedad);
+        ViewBag.idpop=idPropiedad;
         return View("Comprar");
     }
 
-    //    BD.CambiarEstadoPropiedad(idpropiedad);
-    //    return View("Comprar");
       public IActionResult VerCasas()
     {
         ViewBag.listaPropiedades = BD.ObtenerCas();
