@@ -8,6 +8,7 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
+private string user;
     private int _iddireccion;
         private int _idpropiedad;
     public HomeController(ILogger<HomeController> logger)
@@ -22,7 +23,7 @@ public class HomeController : Controller
 
    public IActionResult Inicio(string username)
     {
-        string user = username;
+        user = username;
         ViewBag.Username = user;
         return View("Inicio");
     }
