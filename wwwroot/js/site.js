@@ -21,6 +21,18 @@
     })
 });
 
+function cambiarEstadoPropiedad(idpropiedad) {
+    $.ajax({
+        url: '/Home/Comprar',
+        type: 'POST',
+        data: { idpropiedad: idpropiedad },
+        success: function (response) {
+        },
+        error: function () {
+          
+        }
+    });
+}
 
 function MostrarInmo(id) {        
     $.ajax(

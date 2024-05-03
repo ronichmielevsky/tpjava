@@ -10,8 +10,9 @@
 
 
 {
-    public IActionResult Registrarse()
+    public IActionResult Registrarse(string username)
     {
+
         return View("Acount");
     }
 
@@ -37,7 +38,11 @@
             ViewBag.Error = "El nombre de usuario ya existe";
             return View("Acount");
          }
-         else{ return RedirectToAction("Inicio" , "Home");}
+       else
+        {
+            return RedirectToAction("Inicio", "Home", new { username = username });
+        }
+
     }
 
     public IActionResult Olvide()

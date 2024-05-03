@@ -103,6 +103,15 @@ public static void AgregarInmobiliaria(Inmobiliaria inmo){
         }
 }
 
+public static void CambiarEstadoPropiedad(int idpropiedad){
+     using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string SQL = "UPDATE Propiedades SET Estado = @estado WHERE IdPropiedad = @idPropiedad";
+
+        int filasActualizadas = db.Execute(SQL, new { estado = false, idPropiedad = idpropiedad });
+    }
+}
+
   public static bool TraerEstadoPropiedad (int idinmobiliaria,bool estado){ //AGREGAR ESTADO
           estado = false;
           using (SqlConnection db = new SqlConnection(_connectionString))
@@ -114,9 +123,8 @@ public static void AgregarInmobiliaria(Inmobiliaria inmo){
         }   
     
 
-
+//public static traerUltimoId
 // hacer una funcion que reciba el id de propiedad y cambie el estado a false
-
 public static void AgregarPropiedad(Propiedades prop){
     string SQL = "INSERT INTO Propiedades( descripcion, tipopropiedad, precio, ambiente,  idinmobiliaria, estado) VALUES (@descripcion, @tipopropiedad, @precio, @ambiente, @imagenpropiedad, @estado)";
      using (SqlConnection db = new SqlConnection(_connectionString))

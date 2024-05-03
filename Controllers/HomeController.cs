@@ -20,7 +20,8 @@ public class HomeController : Controller
 
    public IActionResult Inicio(string username)
     {
-        ViewBag.Username = username;
+        string user = username;
+        ViewBag.Username = user;
         return View("Inicio");
     }
 
@@ -36,19 +37,32 @@ public class HomeController : Controller
     {
         return View("Buscador");
     }
-
-     public IActionResult VerMensaje()
+    //COMPRA
+     public IActionResult VerMensaje(int _idpropiedad)
     {
+         BD.CambiarEstadoPropiedad(_idpropiedad);
         return View("VerMensaje");
     }
+    //COMPRA
     public IActionResult FinalizarCompra()
     {
+        
         return View("FinalizarCompra");
     }
-    public IActionResult Comprar()
+
+    private int _idpropiedad;
+
+
+    //NO FUNCIONA, DA ERROR LA PAGINA (405 NO FUNCIONA)
+    [HttpPost]
+    public IActionResult Comprar(int idPropiedad)
     {
-        return View("Comprar");
+        _idpropiedad=idPropiedad;
+        return RedirectToAction("Comprar", new { idPropiedad });
     }
+
+    //    BD.CambiarEstadoPropiedad(idpropiedad);
+    //    return View("Comprar");
       public IActionResult VerCasas()
     {
         ViewBag.listaPropiedades = BD.ObtenerCas();
@@ -68,18 +82,23 @@ public class HomeController : Controller
 }
 
 
+  private int _idInmobiliaria;
 [HttpPost]
 public IActionResult Venta(int idpropiedad, string tipopropiedad, string descripcion, int precio, string ambiente, string imagenpropiedad, int iddireccion, int idinmobiliaria, bool estado)
 {
+    idinmobiliaria = _idInmobiliaria;
     Propiedades prop = new Propiedades(idpropiedad, descripcion, tipopropiedad, precio, ambiente, imagenpropiedad, iddireccion, idinmobiliaria, estado=true);
     BD.AgregarPropiedad(prop);
-    return View("Inmo");
+    return View("Inicio");
 }
 
+
+//ESTO NO ENCUENTRA LA PAGINA UBI, VENTA, SOLO VERCASAS
 [HttpPost]
 public IActionResult Inmobi(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision)
 {
     Inmobiliaria inmo = new Inmobiliaria(idinmobiliaria, nombre, email, telefono, direccion, imageninmobiliaria, comision);
+     _idInmobiliaria = idinmobiliaria;
     BD.AgregarInmobiliaria(inmo);
     return View("Ubi");
 }
@@ -89,13 +108,9 @@ public IActionResult Ubica(int iddireccion,string descripcion,string barrio, int
 {
     Ubicacion ubi = new Ubicacion(iddireccion, descripcion, barrio, altura, calle);
     BD.AgregarUbicacion(ubi);
-    return View("Inicio");
+    return RedirectToAction("Venta", new { iddireccion = iddireccion });
 }
-// public Inmobiliaria TraerEstado(int idinmobiliaria){
-//     ViewBag.estado = BD.TraerEstadoPropiedad(idinmobiliaria);
-//     //ViewBag.estado = true;
-//     return View("VerCasas");
-// }
+
 
 public Propiedades VerInfoPropiedadesAjax(int idpropiedad)
     {

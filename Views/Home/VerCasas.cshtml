@@ -2,7 +2,7 @@
     ViewData["Title"] = "VerCasas";
 }
   <link rel="stylesheet" href="site.css">
-<div class="text-center">
+    <div class="text-center">     
       <h1>Selecciona tu propiedad favorita</h1>
 
 <div class="Tarjetas">
@@ -15,7 +15,7 @@
                 <button type="button" class="btn-primary0" data-bs-toggle="modal" data-bs-target="#ModalInmo" onclick="MostrarInmo(@item.IdInmobiliaria)">Ver Inmobiliaria</button>
                 <button type="button" class="btn-primary0" data-bs-toggle="modal" data-bs-target="#ModalProp"onclick="MostrarProp(@item.IdPropiedad)" >Ver Propiedad</button>
                 <button type="button" class="btn-primary0" data-bs-toggle="modal" data-bs-target="#ModalUbi"onclick="MostrarUbi(@item.IdDireccion)" >Ver Ubicacion</button>
-                <a class = "lol" href='@Url.Action("Comprar","Home")'><button type="button" class="btn-primary1">Comprar aqui</button></a>
+                <a href='@Url.Action("Comprar", "Home", new { idPropiedad = item.IdPropiedad })'><button type="button" class="btn-primary1">Comprar aquí</button></a>
                 <div class="rating">
                 <input value="5" name="rate_@item.IdInmobiliaria" id="star5_@item.IdInmobiliaria" type="radio">
                     <label title="text" for="star5_@item.IdInmobiliaria"></label>
@@ -76,7 +76,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">UB+ICACION</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">UBICACION</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="TextoModalUbicacion" class="modal-body">
