@@ -8,6 +8,7 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
+    private int _iddireccion;
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
@@ -40,7 +41,8 @@ public class HomeController : Controller
     //COMPRA
      public IActionResult VerMensaje(int _idpropiedad)
     {
-         BD.CambiarEstadoPropiedad(_idpropiedad);
+        Console.WriteLine(_idpropiedad);
+        BD.CambiarEstadoPropiedad(_idpropiedad);
         return View("VerMensaje");
     }
     //COMPRA
@@ -54,11 +56,10 @@ public class HomeController : Controller
 
 
     //NO FUNCIONA, DA ERROR LA PAGINA (405 NO FUNCIONA)
-    [HttpPost]
     public IActionResult Comprar(int idPropiedad)
     {
         _idpropiedad=idPropiedad;
-        return RedirectToAction("Comprar", new { idPropiedad });
+        return View("Comprar");
     }
 
     //    BD.CambiarEstadoPropiedad(idpropiedad);
@@ -86,29 +87,34 @@ public class HomeController : Controller
 [HttpPost]
 public IActionResult Venta(int idpropiedad, string tipopropiedad, string descripcion, int precio, string ambiente, string imagenpropiedad, int iddireccion, int idinmobiliaria, bool estado)
 {
-    idinmobiliaria = _idInmobiliaria;
+    idinmobiliaria = BD.getIdInmobiliaria();
+    iddireccion = BD.getIdDireccion();
     Propiedades prop = new Propiedades(idpropiedad, descripcion, tipopropiedad, precio, ambiente, imagenpropiedad, iddireccion, idinmobiliaria, estado=true);
     BD.AgregarPropiedad(prop);
     return View("Inicio");
 }
 
-
-//ESTO NO ENCUENTRA LA PAGINA UBI, VENTA, SOLO VERCASAS
+public IActionResult Inmo(){
+    return View("Inmo");
+}
 [HttpPost]
 public IActionResult Inmobi(int idinmobiliaria, string nombre, string email, int telefono, string direccion, string imageninmobiliaria, int comision)
 {
     Inmobiliaria inmo = new Inmobiliaria(idinmobiliaria, nombre, email, telefono, direccion, imageninmobiliaria, comision);
-     _idInmobiliaria = idinmobiliaria;
     BD.AgregarInmobiliaria(inmo);
     return View("Ubi");
 }
 
+
+
 [HttpPost]
 public IActionResult Ubica(int iddireccion,string descripcion,string barrio, int altura,string calle)
 {
+
     Ubicacion ubi = new Ubicacion(iddireccion, descripcion, barrio, altura, calle);
+    _iddireccion= iddireccion;
     BD.AgregarUbicacion(ubi);
-    return RedirectToAction("Venta", new { iddireccion = iddireccion });
+    return View("Vender");
 }
 
 

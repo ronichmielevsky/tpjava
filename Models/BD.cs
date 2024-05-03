@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Dapper;
 
 static class BD{
-    private static string _connectionString = @"server=PAPUNETA\SQLEXPRESS;DataBase=Login;Trusted_connection=True;";
+    private static string _connectionString = @"server=localhost;DataBase=Login;Trusted_connection=True;";
     
 public static void AgregarCuenta(Usuario user){
     string SQL = "INSERT INTO Usuario(Username,Contraseña,Nombre,Email,Telefono) VALUES (@username, @contraseña, @nombre, @email, @telefono)";
@@ -126,10 +126,10 @@ public static void CambiarEstadoPropiedad(int idpropiedad){
 //public static traerUltimoId
 // hacer una funcion que reciba el id de propiedad y cambie el estado a false
 public static void AgregarPropiedad(Propiedades prop){
-    string SQL = "INSERT INTO Propiedades( descripcion, tipopropiedad, precio, ambiente,  idinmobiliaria, estado) VALUES (@descripcion, @tipopropiedad, @precio, @ambiente, @imagenpropiedad, @estado)";
+    string SQL = "INSERT INTO Propiedades(descripcion, tipopropiedad, precio, ambiente, imagenpropiedad, iddireccion, idinmobiliaria, estado) VALUES (@descripcion, @tipopropiedad, @precio, @ambiente, @imagenpropiedad, @iddireccion, @idinmobiliaria, @estado)";
      using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            db.Execute(SQL, new { tipopropiedad = prop.TipoPropiedad, descripcion = prop.Descripcion, precio = prop.Precio, ambiente = prop.Ambiente, imagenpropiedad = prop.ImagenPropiedad, estado=true}); 
+            db.Execute(SQL, new { tipopropiedad = prop.TipoPropiedad, iddireccion = prop.IdDireccion, idinmobiliaria= prop.IdInmobiliaria, descripcion = prop.Descripcion, precio = prop.Precio, ambiente = prop.Ambiente, imagenpropiedad = prop.ImagenPropiedad, estado=true}); 
         }
 }
 
@@ -140,4 +140,22 @@ public static void AgregarUbicacion(Ubicacion ubi){
             db.Execute(SQL, new { descripcion = ubi.Descripcion, barrio=ubi.Barrio, altura = ubi.Altura, calle = ubi.Calle}); 
         }
 }
+
+public static int getIdInmobiliaria(){
+    string SQL = "SELECT TOP 1 Idinmobiliaria FROM Inmobiliaria ORDER BY Idinmobiliaria desc";
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            return db.QueryFirstOrDefault<int>(SQL);
+        }
+}
+
+
+public static int getIdDireccion(){
+    string SQL = "SELECT TOP 1 IdDireccion FROM Ubicacion ORDER BY idDireccion desc";
+     using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            return db.QueryFirstOrDefault<int>(SQL);
+        }
+}
+
 }
