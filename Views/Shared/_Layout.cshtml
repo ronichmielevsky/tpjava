@@ -30,9 +30,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Inmo">Publicar Propiedad</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Ayuda</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#ModalInmo" style="cursor: pointer;">Cerrar sesion</a>
                         </li>
                     </ul>
@@ -58,7 +55,7 @@
         <div id="TextoModalInmobiliaria">
 
         </div>
-        <div class="modal-footer">
+        <div class="modal-title fs-5">
            <a class="btn btn-secondary" href='@Url.Action("IniciarSesion","Acount")' style= "text-decoration: none ">SI</a> 
            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
         </div>

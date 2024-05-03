@@ -26,7 +26,7 @@ public Propiedades(int idpropiedad,string descripcion,string tipopropiedad, int 
     TipoPropiedad=tipopropiedad;
     Precio=precio;
     Ambiente=ambiente;
-    ImagenPropiedad=ImagenPropiedad;
+    ImagenPropiedad=imagenpropiedad;
     IdDireccion=iddireccion;
     IdInmobiliaria=idinmobiliaria;
     Estado=estado;

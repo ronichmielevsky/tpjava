@@ -40,9 +40,10 @@ private string user;
     {
         return View("Buscador");
     }
-     public IActionResult VerMensaje(int idPropiedad)
+     public IActionResult VerMensaje(int idPropiedad, int Precio)
     {
         Console.WriteLine(idPropiedad);
+        Console.WriteLine(Precio);
         BD.CambiarEstadoPropiedad(idPropiedad);
         return View("VerMensaje");
     }
@@ -85,6 +86,7 @@ public IActionResult Venta(int idpropiedad, string tipopropiedad, string descrip
     idinmobiliaria = BD.getIdInmobiliaria();
     iddireccion = BD.getIdDireccion();
     Propiedades prop = new Propiedades(idpropiedad, descripcion, tipopropiedad, precio, ambiente, imagenpropiedad, iddireccion, idinmobiliaria, estado=true);
+    //descripcion, tipopropiedad, precio, ambiente, imagenpropiedad, iddireccion, idinmobiliaria, estado
     BD.AgregarPropiedad(prop);
     return View("Inicio");
 }

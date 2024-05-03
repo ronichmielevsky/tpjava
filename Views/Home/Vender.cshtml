@@ -16,11 +16,11 @@
       <form method="post" action='@Url.Action("Venta","Home")'>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Tipo propiedad</label>
-    <input type="text" class="form-control" name="tipopropiedad" id="exampleInputPassword1">
+    <input type="text" class="form-control" name="tipopropiedad" id="exampleInputPassword1" placeholder="Casa/Depto" required>
   </div>
 <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Descripcion de la propiedad</label>
-    <input type="text" class="form-control" name="descripcion" id="exampleInputPassword1">
+    <input type="text" class="form-control" name="descripcion" id="exampleInputPassword1" placeholder="Linda/espaciosa" required>
   </div>
    <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Precio</label>
@@ -28,11 +28,11 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Numero de ambientes</label>
-    <input type="number" class="form-control" name="ambiente" id="exampleInputPassword1">
+    <input type="number" class="form-control" name="ambiente" id="exampleInputPassword1" placeholder="3" required>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Foto de la casa/departamento</label>
-    <input type="text" class="form-control" name="imagenpropiedad" id="exampleInputPassword1">
+    <label for="exampleInputPassword2" class="form-label">Foto de la casa/departamento</label>
+    <input type="text" class="form-control" name="imagenpropiedad" id="exampleInputPassword2" placeholder="URL" required>
   </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

@@ -20,27 +20,23 @@
       <form method="post" action='@Url.Action("Inmobi","Home")'>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Nombre de la inmobiliaria</label>
-    <input type="text" class="form-control" name="nombre" id="exampleInputPassword1">
+    <input type="text" class="form-control" name="nombre" id="exampleInputPassword1" required>
   </div>
 <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Email de la inmobiliaria</label>
-    <input type="text" class="form-control" name="email" id="exampleInputPassword1">
+    <input type="text" class="form-control" name="email" id="exampleInputPassword1" required>
   </div>
    <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Telefono de la inmobiliaria</label>
-    <input type="number" class="form-control" name="telefono" id="exampleInputPassword1">
+    <input type="number" class="form-control" name="telefono" id="exampleInputPassword1" required>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Ubicacion de la sede principal</label>
-    <input type="text" class="form-control" name="direccion" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Imagen de la inmobiliaria</label>
-    <input type="file" class="form-control" name="imagenpropiedad" id="exampleInputPassword1">
+    <input type="text" class="form-control" name="direccion" id="exampleInputPassword1" required>
   </div>
   <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Comision</label>
-      <input type="number" class="form-control" name="comision" id="exampleInputPassword1">
+      <input type="number" class="form-control" name="comision" id="exampleInputPassword1" required>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
